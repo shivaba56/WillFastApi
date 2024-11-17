@@ -1,8 +1,7 @@
 version: '3.8'
 
 services:
-  fastapi:
-    environment:
+  environment:
       - DATABASE_NAME=your_database_name
       - SECRET_KEY=your_secret_key
   db:
