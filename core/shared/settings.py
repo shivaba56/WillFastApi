@@ -2,7 +2,7 @@ from pydantic_settings import BaseSettings
 from decouple import config
 
 class Settings(BaseSettings):
-    SECRET_KEY = config('SECRET_KEY', default='mydefaultvalue')
+    SECRET_KEY: str = config("SECRET_KEY", cast = str)
     JWT_ALGORITHM: str = "HS256"
     JWT_EXPIRATION_TIME: int = 30  # minutes
     JWT_REFRESH_EXPIRATION_TIME: int = 60  # minutes
